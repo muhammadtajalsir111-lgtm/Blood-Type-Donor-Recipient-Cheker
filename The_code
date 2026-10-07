@@ -1,0 +1,56 @@
+def types_of_blood():
+    s = input('Do you want to donate? (yes/no): ').lower()
+
+    if s == 'yes':
+        n = input('What is your blood type? ')
+        if n == '+O':
+            print('You can donate to O, +A, +B, +AB')
+        elif n == '+A':
+            print('You can donate to +A, +AB')
+        elif n == '+B':
+            print('You can donate to +B, +AB')
+        elif n == '+AB':
+            print('You can just donate to +AB')
+        elif n == '-O':
+            print('You can donate to all types')
+        elif n == '-A':
+            print('You can donate to +A, -A, +AB, -AB')
+        elif n == '-B':
+            print('You can donate to +B, -B, +AB, -AB')
+        elif n == '-AB':
+            print('You can donate to -AB, +AB')
+        else:
+            print('This is not a valid blood type.')
+
+    elif s == 'no':
+        w = input('Are you need to receive? (yes/no): ').lower()
+        if w == 'yes':
+            m = input('What is your blood type? ')
+            if m == '+O':
+                print('You can absorb from +O, -O')
+            elif m == '+A':
+                print('You can absorb from +A, -A, +O, -O')
+            elif m == '+B':
+                print('You can absorb from +B, -B, +O, -O')
+            elif m == '+AB':
+                print('You can absorb from all kinds')
+            elif m == '-O':
+                print('You can absorb from -O')
+            elif m == '-A':
+                print('You can absorb from -A, -O')
+            elif m == '-B':
+                print('You can absorb from -B, -O')
+            elif m == '-AB':
+                print('You can absorb from -AB, -A, -B, -O')
+            else:
+                print('This is not a valid blood type.')
+        elif w == 'no':
+            print("Sorry, I can't help you.")
+        else:
+            print("Sorry, we can't help you.")
+
+    else:
+        print("Invalid input. Please answer 'yes' or 'no'.")
+
+# Run the program
+types_of_blood()
